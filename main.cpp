@@ -42,7 +42,7 @@ void showInfo(char choise) {
 			<< "Выберите полку: \n"
 			<< "1. Крупная бытовая техника \n"
 			<< "2. Мелкая бытовая техника\n\n\n"
-			<< "для выхода выбрать q";
+			<< "для выхода выбрать q" << "\n\n";
 
 		break;
 		}
@@ -59,18 +59,19 @@ int main()
 	setlocale(LC_ALL, "");
 	char choise{'0'};
 	bool exitNow{ false };
-	const int SIZE_electonica{ 1 };
+	const int SIZE_electonica{ 6 };
 
 
 	IElectronics *elecronica[SIZE_electonica];
 
 
-
 	elecronica[0] = new Holodilnik("LG", 200, 350, "Зеленый", "A+");
-	
-	elecronica[0]->Show();
+	elecronica[1] = new WashingMachine("Bosch",100,150,80);
+	elecronica[2] = new GasStove("Gorenie",50,80,"Белый",4);
 
-
+	elecronica[3] = new VacuumCleaner("Kerher","Желтый",1500,3.5);
+	elecronica[4] = new Microwave("LG","Черный",3,2500);
+	elecronica[5] = new Teapot("Scarlett", "Черный", 3);
 	
 
 	
@@ -79,7 +80,32 @@ int main()
 		showInfo(choise);
 		cin >> choise;
 
+		if (choise == 'q') exitNow = true;
 
+		switch (choise)
+		{
+		case '1': 
+		 {
+			cout << "На складе Крупная бытовая техника в наличии: \n";
+
+			for (int i = 0; i<3 ; i++ ) {
+				elecronica[i]->Show();
+				cout << endl;
+			}			
+		 }
+		case '2':
+			cout << "На складе Мелкая бытовая техника в наличии: \n";
+
+			for (int i = 3; i < 5; i++) {
+				elecronica[i]->Show();
+				cout << endl;
+			}			
+		default:
+			
+			if (!exitNow) { "нет такого значения\n"; }
+			
+			break;
+		}
 
 	}
 	

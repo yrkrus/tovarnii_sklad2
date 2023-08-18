@@ -37,6 +37,7 @@ public:
 	double getDustcontainervolume();
 	void setDustcontainervolume(double newdustcontainervolume);
 
+	void Show() override;
 
 protected:
 	int power_;						// мощность
@@ -57,6 +58,8 @@ public:
 	int getPower();
 	void setPower(int newpower);
 
+	void Show() override;
+
 protected:
 	int volume_{ 0 };			    	 // вместимость в литрах
 	int power_{ 0 };					 // мощность
@@ -72,6 +75,8 @@ public:
 
 	int getVolume();
 	void setVolume(int newvolume);
+
+	void Show() override;
 
 
 protected:

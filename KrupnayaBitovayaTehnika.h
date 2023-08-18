@@ -90,6 +90,8 @@ public:
 	void setColor(std::string newcolor);
 	std::string getColor();
 
+	void Show() override;
+
 
 protected:
 	std::string color_;		    // цвет

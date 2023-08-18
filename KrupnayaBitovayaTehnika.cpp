@@ -49,7 +49,8 @@ void Holodilnik::setEnergyclass(std::string newenergyclass) { energyclass_ = new
 
 void Holodilnik::Show()
 {
-	std::cout << "Бренд: " << brend_ << "\n"
+	std::cout << "Холодильник" << "\n"
+			  << "Бренд: " << brend_ << "\n"
 			  << "Высота: " << height_ << "\n"
 			  << "Ширина: " << weight_ << "\n"
 			  << "Цвет: " << color_ << "\n"
@@ -73,10 +74,11 @@ void WashingMachine::setDepth(int newdepth) { depth_ = newdepth; }
 
 void WashingMachine::Show()
 {
-	std::cout << "Бренд: " << brend_ << "\n"
-		<< "Высота: " << height_ << "\n"
-		<< "Ширина: " << weight_ << "\n"
-		<< "Глубина: " << depth_ << std::endl;
+	std::cout << "Стиральная машина" << "\n"
+			  << "Бренд: " << brend_ << "\n"
+		      << "Высота: " << height_ << "\n"
+			  << "Ширина: " << weight_ << "\n"
+			  << "Глубина: " << depth_ << std::endl;
 }
 
 
@@ -99,7 +101,8 @@ std::string GasStove::getColor(){ return color_; }
 
 void GasStove::Show()
 {
-	std::cout << "Бренд: " << brend_ << "\n"
+	std::cout << "Газовая плита" << "\n"
+			  << "Бренд: " << brend_ << "\n"
 			  << "Высота: " << height_ << "\n"
 			  << "Ширина: " << weight_ << "\n"
 		      << "Цвет: " << color_ << "\n"		

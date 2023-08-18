@@ -34,6 +34,14 @@ void VacuumCleaner::setPower(int newpower){	power_ = newpower; }
 double VacuumCleaner::getDustcontainervolume(){	return dustcontainervolume_; }
 void VacuumCleaner::setDustcontainervolume(double newdustcontainervolume){ dustcontainervolume_ = newdustcontainervolume; }
 
+void VacuumCleaner::Show()
+{
+	std::cout << "Бренд: " << brend_ << "\n"
+		<< "Цвет: " << color_ << "\n"
+		<< "Мощность: " << power_ << "\n"
+		<< "ОБъем контейнера: " << dustcontainervolume_ << std::endl;
+}
+
 
 // конструткоры
 Microwave::Microwave()
@@ -51,6 +59,14 @@ void Microwave::setVolume(int newvolume){ volume_ = newvolume; }
 int Microwave::getPower(){ return power_; }
 void Microwave::setPower(int newpower){	power_ = newpower; }
 
+void Microwave::Show()
+{
+	std::cout << "Бренд: " << brend_ << "\n"
+			  << "Цвет: " << color_ << "\n"
+			  << "Объем: " << volume_ << "\n"
+			  << "Мощность: " << power_ << std::endl;
+}
+
 
 // конструкторы
 Teapot::Teapot()
@@ -65,3 +81,10 @@ Teapot::Teapot(std::string brend, std::string color, int volume) : MelkayaBitova
 
 int Teapot::getVolume(){ return volume_;}
 void Teapot::setVolume(int newvolume){ volume_ = newvolume; }
+
+void Teapot::Show()
+{
+	std::cout << "Бренд: " << brend_ << "\n"
+			  << "Цвет: " << color_ << "\n"
+			  << "Объем: " << volume_ << std::endl;
+}
