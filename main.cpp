@@ -110,7 +110,7 @@ int main()
 	}
 	
 
-	delete elecronica[SIZE_electonica];
+	delete elecronica[SIZE_electonica-1];
 	return 0;
 
 }
