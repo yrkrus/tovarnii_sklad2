@@ -49,7 +49,7 @@ public:
 	std::string getEnergyclass();
 	void setEnergyclass(std::string newenergyclass);
 
-	void Show();
+	virtual void Show() override;
 
 protected:
 	std::string color_;				// цвет

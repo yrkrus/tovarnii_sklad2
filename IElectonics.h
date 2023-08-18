@@ -5,6 +5,7 @@ class IElectronics
 public:
 //	virtual void ShowPrice() = 0;
 	virtual std::string ShowBrend() = 0;
+	virtual void Show() = 0;
 
 	virtual ~IElectronics() = default;
 };
