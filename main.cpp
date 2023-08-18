@@ -66,8 +66,6 @@ int main()
 
 
 
-
-
 	elecronica[0] = new Holodilnik("LG", 200, 350, "Зеленый", "A+");
 	
 	elecronica[0]->Show();

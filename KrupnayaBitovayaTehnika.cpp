@@ -71,6 +71,14 @@ WashingMachine::WashingMachine(std::string brend, int weight, int height, int de
 int WashingMachine::getDepth() { return depth_; }
 void WashingMachine::setDepth(int newdepth) { depth_ = newdepth; }
 
+void WashingMachine::Show()
+{
+	std::cout << "Бренд: " << brend_ << "\n"
+		<< "Высота: " << height_ << "\n"
+		<< "Ширина: " << weight_ << "\n"
+		<< "Глубина: " << depth_ << std::endl;
+}
+
 
 // конструкторы
 GasStove::GasStove()
@@ -88,6 +96,15 @@ int GasStove::getBurner(){ return burner_; }
 
 void GasStove::setColor(std::string newcolor) { color_ = newcolor; }
 std::string GasStove::getColor(){ return color_; }
+
+void GasStove::Show()
+{
+	std::cout << "Бренд: " << brend_ << "\n"
+			  << "Высота: " << height_ << "\n"
+			  << "Ширина: " << weight_ << "\n"
+		      << "Цвет: " << color_ << "\n"		
+			  << "Кол-во комфорок: " << burner_ << std::endl;
+}
 
 
 

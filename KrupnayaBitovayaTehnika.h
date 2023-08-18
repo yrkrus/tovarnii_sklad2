@@ -49,7 +49,7 @@ public:
 	std::string getEnergyclass();
 	void setEnergyclass(std::string newenergyclass);
 
-	virtual void Show() override;
+	void Show() override;
 
 protected:
 	std::string color_;				// цвет
@@ -68,8 +68,10 @@ public:
 	int getDepth();
 	void setDepth(int newdepth);
 
+	void Show() override;
+
 protected:
-	int depth_;
+	int depth_;				// глубина
 
 };
 
